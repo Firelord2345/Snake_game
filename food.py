@@ -9,7 +9,9 @@ class Food(Turtle):
         self.speed("fastest")
         self.penup()
         self.relocate()
+        
     def relocate(self):
         x_cor=random.randint(-230,230)
         y_cor=random.randint(-230,230)
         self.goto(x_cor,y_cor)
+      
