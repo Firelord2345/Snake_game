@@ -33,12 +33,19 @@ while is_run==True:
     # if it touches the wall
     if(snake.head.xcor()>240 or snake.head.xcor()<-240 or snake.head.ycor()>240 or snake.head.ycor()<-240):
         
-        score.game_over()
-        is_run=False
+        # score.game_over()
+        
+        score.reset()
+        snake.reset_snake()
+        
+        # is_run=False
     for segment in snake.snakes[1:]:
         if snake.head.distance(segment)<10:
-            is_run=False
-            score.game_over()
+            # is_run=False
+            # score.game_over()
+            
+            score.reset()
+            snake.reset_snake()
     
  
 

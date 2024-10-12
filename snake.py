@@ -21,6 +21,13 @@ class Snake:
         snake.color("white")
         snake.goto(x_position, 0)  # Set the y-coordinate to 0
         self.snakes.append(snake)
+    def reset_snake(self):
+        for _ in self.snakes:
+            _.goto(1000,1000)
+        self.snakes.clear()
+        
+        self.createSnakes()
+        self.head=self.snakes[0]
 
     def extend(self):
         """Extend the snake by adding a new segment at the last segment's position."""
